@@ -1,0 +1,232 @@
+
+ [
+  {
+    "id": 1,
+    "name": "HTML",
+    "slug": "html",
+    "logo": "/icons/html.svg",
+    "topicCount": 3,
+    "topics": [
+      {
+        "id": "html-basics-headings",
+        "name": "Basic Structure and Headings",
+        "slug": "html-basics-headings",
+        "description": "Learn the basics of HyperText Markup Language (HTML).",
+        "questions": [
+          {
+            "id": "html-q1",
+            "question": "What does HTML stand for?",
+            "options": [
+              { "id": "opt1", "text": "HyperText Markup Language" },
+              { "id": "opt2", "text": "Hyper Transfer Markup Language" },
+              { "id": "opt3", "text": "HighText Machine Language" },
+              { "id": "opt4", "text": "Home Tool Markup Language" }
+            ],
+            "correctAnswerId": "opt1",
+            "explanation": "HTML stands for HyperText Markup Language, which is the standard markup language for creating web pages."
+          },
+          {
+            "id": "html-q2",
+            "question": "Which of these tags is used to create a main heading?",
+            "options": [
+              { "id": "opt1", "text": "<p>" },
+              { "id": "opt2", "text": "<h1>" },
+              { "id": "opt3", "text": "<heading>" },
+              { "id": "opt4", "text": "<h6>" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The <h1> tag is used to define the main heading in HTML."
+          },
+          {
+            "id": "html-q3",
+            "question": "Which of these tags is used to create a main heading?",
+            "options": [
+              { "id": "opt1", "text": "<p>" },
+              { "id": "opt2", "text": "<h1>" },
+              { "id": "opt3", "text": "<heading>" },
+              { "id": "opt4", "text": "<h6>" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The <h1> tag is used to define the main heading in HTML."
+          },
+          {
+            "id": "html-q4",
+            "question": "Which of these tags is used to create a main heading?",
+            "options": [
+              { "id": "opt1", "text": "<p>" },
+              { "id": "opt2", "text": "<h1>" },
+              { "id": "opt3", "text": "<heading>" },
+              { "id": "opt4", "text": "<h6>" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The <h1> tag is used to define the main heading in HTML."
+          },
+          {
+            "id": "html-q5",
+            "question": "Which of these tags is used to create a main heading?",
+            "options": [
+              { "id": "opt1", "text": "<p>" },
+              { "id": "opt2", "text": "<h1>" },
+              { "id": "opt3", "text": "<heading>" },
+              { "id": "opt4", "text": "<h6>" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The <h1> tag is used to define the main heading in HTML."
+          }
+        ]
+      },
+      {
+        "id": "links-and-lists",
+        "name": "Links and Lists",
+        "slug": "links-and-lists",
+        "description": "Learn the basics of HyperText Markup Language (HTML).",
+        "questions": [
+          {
+            "id": "html-q1",
+            "question": "What does HTML stand for?",
+            "options": [
+              { "id": "opt1", "text": "HyperText Markup Language" },
+              { "id": "opt2", "text": "Hyper Transfer Markup Language" },
+              { "id": "opt3", "text": "HighText Machine Language" },
+              { "id": "opt4", "text": "Home Tool Markup Language" }
+            ],
+            "correctAnswerId": "opt1",
+            "explanation": "HTML stands for HyperText Markup Language, which is the standard markup language for creating web pages."
+          },
+          {
+            "id": "html-q2",
+            "question": "Which of these tags is used to create a main heading?",
+            "options": [
+              { "id": "opt1", "text": "<p>" },
+              { "id": "opt2", "text": "<h1>" },
+              { "id": "opt3", "text": "<heading>" },
+              { "id": "opt4", "text": "<h6>" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The <h1> tag is used to define the main heading in HTML."
+          },
+          {
+            "id": "html-q3",
+            "question": "Which of these tags is used to create a main heading?",
+            "options": [
+              { "id": "opt1", "text": "<p>" },
+              { "id": "opt2", "text": "<h1>" },
+              { "id": "opt3", "text": "<heading>" },
+              { "id": "opt4", "text": "<h6>" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The <h1> tag is used to define the main heading in HTML."
+          }
+          
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "slug": "css",
+    "logo": "/icons/css.svg",
+    "topicCount": 3,
+    "topics": [
+      {
+        "id": "css-basics",
+        "name": "CSS Basics",
+        "slug": "css-basics",
+        "description": "Learn the basics of Cascading Style Sheets (CSS).",
+        "questions": [
+          {
+            "id": "css-q1",
+            "question": "What does CSS stand for?",
+            "options": [
+              { "id": "opt1", "text": "Cascading Style Sheets" },
+              { "id": "opt2", "text": "Colorful Style Sheets" },
+              { "id": "opt3", "text": "Computer Style Sheets" },
+              { "id": "opt4", "text": "Creative Style Sheets" }
+            ],
+            "correctAnswerId": "opt1",
+            "explanation": "CSS stands for Cascading Style Sheets, which is used for styling web pages."
+          },
+          {
+            "id": "css-q3",
+            "question": "Which property is used to change the background color?",
+            "options": [
+              { "id": "opt1", "text": "bgcolor" },
+              { "id": "opt2", "text": "background-color" },
+              { "id": "opt3", "text": "color" },
+              { "id": "opt4", "text": "background" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The background-color property is used to change the background color of an element."
+          },
+          {
+            "id": "css-q4",
+            "question": "Which property is used to change the background color?",
+            "options": [
+              { "id": "opt1", "text": "bgcolor" },
+              { "id": "opt2", "text": "background-color" },
+              { "id": "opt3", "text": "color" },
+              { "id": "opt4", "text": "background" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The background-color property is used to change the background color of an element."
+          },
+          {
+            "id": "css-q5",
+            "question": "Which property is used to change the background color?",
+            "options": [
+              { "id": "opt1", "text": "bgcolor" },
+              { "id": "opt2", "text": "background-color" },
+              { "id": "opt3", "text": "color" },
+              { "id": "opt4", "text": "background" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The background-color property is used to change the background color of an element."
+          },
+          {
+            "id": "css-q2",
+            "question": "Which property is used to change the background color?",
+            "options": [
+              { "id": "opt1", "text": "bgcolor" },
+              { "id": "opt2", "text": "background-color" },
+              { "id": "opt3", "text": "color" },
+              { "id": "opt4", "text": "background" }
+            ],
+            "correctAnswerId": "opt2",
+            "explanation": "The background-color property is used to change the background color of an element."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "slug": "javascript",
+    "logo": "/icons/javascript.svg",
+    "topicCount": 3,
+    "topics": [
+      {
+        "id": "js-basics",
+        "name": "JavaScript Basics",
+        "slug": "js-basics",
+        "description": "Learn the basics of JavaScript programming language.",
+        "questions": [
+          {
+            "id": "js-q1",
+            "question": "What does JS stand for?",
+            "options": [
+              { "id": "opt1", "text": "JavaScript" },
+              { "id": "opt2", "text": "Java Source" },
+              { "id": "opt3", "text": "Just Script" },
+              { "id": "opt4", "text": "JScript" }
+            ],
+            "correctAnswerId": "opt1",
+            "explanation": "JS stands for JavaScript, which is a programming language used for web development."
+          }
+
+        ]
+      }
+    ]
+  }
+]
