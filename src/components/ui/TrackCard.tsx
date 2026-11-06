@@ -7,7 +7,7 @@ import { Eye } from "lucide-react";
 import { Track } from "@/types/track";
 import LikeButton from "@/components/ui/LikeButton";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { recordView } from "@/lib/api/views";
 
 interface TrackCardProps {
   track: Track;
@@ -45,22 +45,16 @@ export default function TrackCard({
     if (isTracking || !sessionId) return;
     setIsTracking(true);
 
-    try {
-      const response = await axios.post(
-        `https://devapi.enjezly.com/api/website/learning-tracks/${track.slug}/view`,
-        {
-          session_id: sessionId,
-        }
-      );
+    const updatedViews = await recordView(
+      `learning-tracks/${track.slug}/view`,
+      sessionId,
+    );
 
-      if (response.data.recorded) {
-        setViews(response.data.views_count);
-      }
-    } catch (error) {
-      console.error("Error tracking view:", error);
-    } finally {
-      setTimeout(() => setIsTracking(false), 1000);
+    if (updatedViews !== null) {
+      setViews(updatedViews);
     }
+
+    setTimeout(() => setIsTracking(false), 1000);
   };
 
   const formatViews = (count: number): string => {
