@@ -115,7 +115,7 @@ export const mockTracks: Track[] = [
     name: "Frontend Development (Vue.js)",
     description:
       "Develop elegant, reactive UIs with Vue 3, the Composition API, and the Vue ecosystem.",
-    image_url: "/icons/vue.svg",
+    image_url: "/icons/vuejs.svg",
     views_count: 760,
     likes_count: 187,
     is_liked: false,

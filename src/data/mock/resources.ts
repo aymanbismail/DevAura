@@ -243,7 +243,7 @@ export const mockResources: Resource[] = [
     id: 7,
     name: "Vue.js",
     slug: "vuejs",
-    image_url: "/icons/vue.svg",
+    image_url: "/icons/vuejs.svg",
     category_id: 7,
     category: { id: 7, name: "Vue.js" },
     views_count: 1400,
