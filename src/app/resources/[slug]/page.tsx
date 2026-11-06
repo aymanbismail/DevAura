@@ -53,7 +53,7 @@ export async function generateMetadata({
       title,
       description,
       keywords,
-      authors: [{ name: "Your Platform Name" }],
+      authors: [{ name: "DevAura" }],
       openGraph: {
         title,
         description,
@@ -67,14 +67,14 @@ export async function generateMetadata({
             alt: `${resource.name} Resources`,
           },
         ],
-        siteName: "Your Platform Name",
+        siteName: "DevAura",
       },
       twitter: {
         card: "summary_large_image",
         title,
         description,
         images: [resource.image_url || "/default-og-image.jpg"],
-        creator: "@yourhandle",
+        creator: "@aymanbismail",
       },
       alternates: {
         canonical: absoluteUrl(`/resources/${slug}`),

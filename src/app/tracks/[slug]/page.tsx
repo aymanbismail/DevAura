@@ -278,7 +278,7 @@ export default async function TrackPage({ params }: TrackPageProps) {
                 description: track.description,
                 provider: {
                   "@type": "Organization",
-                  name: "Your Platform Name",
+                  name: "DevAura",
                   sameAs: siteUrl,
                 },
                 hasCourseInstance: {

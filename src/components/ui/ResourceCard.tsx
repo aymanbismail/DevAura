@@ -7,7 +7,7 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Resource } from "@/types/resource";
 import LikeButton from "@/components/ui/LikeButton";
-import axios from "axios";
+import { recordView } from "@/lib/api/views";
 
 interface ResourceCardProps {
   resource: Resource;
@@ -45,22 +45,16 @@ export default function ResourceCard({
     if (isTracking || !sessionId) return;
     setIsTracking(true);
 
-    try {
-      const response = await axios.post(
-        `https://devapi.enjezly.com/api/website/resources/${resource.slug}/view`,
-        {
-          session_id: sessionId,
-        }
-      );
+    const updatedViews = await recordView(
+      `resources/${resource.slug}/view`,
+      sessionId,
+    );
 
-      if (response.data.recorded) {
-        setViews(response.data.views_count);
-      }
-    } catch (error) {
-      console.error("Error tracking view:", error);
-    } finally {
-      setTimeout(() => setIsTracking(false), 1000);
+    if (updatedViews !== null) {
+      setViews(updatedViews);
     }
+
+    setTimeout(() => setIsTracking(false), 1000);
   };
 
   const formatViews = (count: number): string => {
