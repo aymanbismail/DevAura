@@ -14,6 +14,7 @@ import DonateSection from "@/components/DonateSction";
 import MotionWrapper from "@/components/MotionWrapper";
 import type { Metadata } from "next";
 import { getResourceBySlug } from "@/lib/api/apiResource";
+import { absoluteUrl } from "@/lib/site";
 
 interface ResourcePageProps {
   params: Promise<{ slug: string }>;
@@ -57,7 +58,7 @@ export async function generateMetadata({
         title,
         description,
         type: "website",
-        url: `https://yourwebsite.com/resources/${slug}`,
+        url: absoluteUrl(`/resources/${slug}`),
         images: [
           {
             url: resource.image_url || "/default-og-image.jpg",
@@ -76,7 +77,7 @@ export async function generateMetadata({
         creator: "@yourhandle",
       },
       alternates: {
-        canonical: `https://yourwebsite.com/resources/${slug}`,
+        canonical: absoluteUrl(`/resources/${slug}`),
       },
       robots: {
         index: true,
@@ -114,7 +115,7 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
       "@type": "CollectionPage",
       name: `${resource.name} Resources`,
       description: `Curated collection of ${resource.resources_data.length} resources for learning ${resource.name}`,
-      url: `https://yourwebsite.com/resources/${slug}`,
+      url: absoluteUrl(`/resources/${slug}`),
       image: resource.image_url,
       numberOfItems: resource.resources_data.length,
       about: {
