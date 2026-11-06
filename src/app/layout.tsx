@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import ConditionalLayout from "@/components/ConditionalLayout";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { AuthProvider } from "@/context/AuthContext";
+import { siteUrl } from "@/lib/site";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,12 +40,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Hussein Imad" }],
   generator: "Next.js",
-  metadataBase: new URL("https://devaura.vercel.app"),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "DevAura - Master Coding Through Interactive Learning",
     description:
       "Practice programming through interactive quizzes and structured learning paths. DevAura is your all-in-one free platform for mastering web, backend, mobile, and data skills.",
-    url: "https://devaura.vercel.app",
+    url: siteUrl,
     siteName: "DevAura",
     locale: "en_US",
     type: "website",

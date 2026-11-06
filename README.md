@@ -13,7 +13,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Portfolio Mode](https://img.shields.io/badge/Mode-Portfolio%20Demo-orange?style=flat-square)](#api-layer)
 
-**[Live Demo](https://devaura-beta.vercel.app)** · **[Report a Bug](https://github.com/aymanbismail/DevAura/issues)** · **[Request a Feature](https://github.com/aymanbismail/DevAura/issues)**
+**[Live Demo](https://devaura.aymanismail.com)** · **[Report a Bug](https://github.com/aymanbismail/DevAura/issues)** · **[Request a Feature](https://github.com/aymanbismail/DevAura/issues)**
 
 </div>
 
@@ -304,16 +304,30 @@ pnpm lint
 
 ## Environment Variables
 
-The application runs in **portfolio mode by default** with no environment variables required. The following variable is needed only when connecting to the production backend.
+The application runs in **portfolio mode by default** with no environment variables required. `NEXT_PUBLIC_SITE_URL` overrides the public origin used for SEO metadata, and `NEXT_PUBLIC_API_URL` is needed only when connecting to the production backend.
 
 ```bash
 # .env.local
+
+# ─── Site ─────────────────────────────────────────────────────────────────────
+# Public origin of the deployed site, with no trailing slash.
+# Single source of truth for metadataBase, canonical URLs, Open Graph /
+# Twitter URLs, JSON-LD, sitemap.xml and robots.txt (see src/lib/site.ts).
+# Defaults to https://devaura.aymanismail.com when unset.
+# Local development: http://localhost:3000
+NEXT_PUBLIC_SITE_URL=https://devaura.aymanismail.com
 
 # ─── Backend API ──────────────────────────────────────────────────────────────
 # Base URL for the Laravel API.
 # Omit this variable to use static mock data (portfolio mode).
 NEXT_PUBLIC_API_URL=https://your-api-domain.com/api
 ```
+
+> `NEXT_PUBLIC_SITE_URL` is optional in local development — the fallback in
+> `src/lib/site.ts` already points at the production domain
+> (`https://devaura.aymanismail.com`). Set it when deploying to a different
+> origin (a Vercel preview build, a staging domain) so canonical tags, Open
+> Graph URLs and `sitemap.xml` reference that origin instead.
 
 > **Security note:** No secrets or API keys are required for the frontend in this version. The backend handles all authentication and authorization. Never commit real environment values to version control.
 
