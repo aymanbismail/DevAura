@@ -13,6 +13,7 @@ import Link from "next/link";
 import MotionWrapper from "@/components/MotionWrapper";
 import { Metadata } from "next";
 import { getTrackBySlug } from "@/lib/api/apiTrack";
+import { absoluteUrl, siteUrl } from "@/lib/site";
 
 interface TrackPageProps {
   params: Promise<{ slug: string }>;
@@ -46,7 +47,7 @@ export async function generateMetadata({
           track.description ||
           `Master ${track.name} with our comprehensive learning track`,
         type: "article",
-        url: `https://yourdomain.com/tracks/${slug}`,
+        url: absoluteUrl(`/tracks/${slug}`),
         images: [
           {
             url: track.image_url,
@@ -65,7 +66,7 @@ export async function generateMetadata({
         images: [track.image_url],
       },
       alternates: {
-        canonical: `https://yourdomain.com/tracks/${slug}`,
+        canonical: absoluteUrl(`/tracks/${slug}`),
       },
     };
   } catch (error) {
@@ -273,11 +274,12 @@ export default async function TrackPage({ params }: TrackPageProps) {
                 "@context": "https://schema.org",
                 "@type": "Course",
                 name: `${track.name} Learning Track`,
+                url: absoluteUrl(`/tracks/${track.slug}`),
                 description: track.description,
                 provider: {
                   "@type": "Organization",
-                  name: "Your Platform Name",
-                  sameAs: "https://yourdomain.com",
+                  name: "DevAura",
+                  sameAs: siteUrl,
                 },
                 hasCourseInstance: {
                   "@type": "CourseInstance",
